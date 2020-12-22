@@ -1,0 +1,103 @@
+#contato{
+	background: linear-gradient(360deg, white 10%, #FFDC9C 100%);
+}
+
+#contato > div{
+	height: 70%;
+
+	display: flex;
+
+	position: absolute;
+
+	text-align: left;
+
+	bottom: 0px;
+	left: clamp( 0px, 10%, 300px);
+}
+
+#contato > div > div{
+	width: clamp( 0px, 80%, 450px);
+
+	display: flex;
+	flex-direction: column;
+
+	text-align: left;
+}
+
+#contato > div > div > div{
+	display: flex;
+	align-items: baseline;
+}
+
+#contato h1{
+	font-size: clamp( 30px, 2vw, 8rem);
+
+	margin-bottom: 20px;
+}
+
+#contato label{
+	width: 90px;
+
+	display: inline-block;
+
+	font-size: clamp( 20px, 1vw, 3rem);
+	font-weight: 600;
+}
+
+#contato input,
+#contato textarea{
+	width: 220px;
+
+	display: inline-block;
+
+	border-radius: 5px;
+
+	margin: 5px 20px;
+}
+
+#contato button{
+	width: 60%;
+
+	font-size: clamp( 20px, 5vw, 2.5rem);
+
+	padding: 5px;
+
+	margin-top: 20px;
+
+	background-color: #FFDC9C;
+	border: none;
+	border-radius: 6px;
+
+	box-shadow: 2px 2px 5px #80612873;
+}
+
+#contato button:hover{
+	background-color: #CCB07C;
+
+	transition: background 300ms;
+
+	cursor: pointer;
+}
+
+#contato img{
+	width: 620px;
+	height: 350px;
+
+	margin: 0 20px;
+}
+
+#problema{
+	resize: none;
+}
+
+@media(max-width: 1000px){
+	#contato > div{
+		height: 75%;
+		width: clamp( 0px, 90%, 500px);
+		flex-direction: column;
+	}
+
+	#contato img{
+		width: 90%;
+	}
+}

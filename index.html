@@ -9,8 +9,23 @@
 	<link rel="stylesheet" href="imports/css/universal.css">
 	<link rel="stylesheet" href="imports/css/inicio.css">
 	<link rel="stylesheet" href="imports/css/beneficio.css">
+	<link rel="stylesheet" href="imports/css/adotar.css">
+	<link rel="stylesheet" href="imports/css/contato.css">
 
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap">
+
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+		integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+		crossorigin=""
+	/>
+
+	<script
+		src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+		integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+		crossorigin="">
+	</script>
 </head>
 <body>
 	<header id="menu">
@@ -19,10 +34,10 @@
 			<p>SuperCat</p>
 		</div>
 		<ul>
-			<li>Início</li>
-			<li>Benefícios</li>
-			<li>Como Adotar</li>
-			<li>Contato</li>
+			<li><a href="#inicio">Início</a></li>
+			<li><a id="a" href="#beneficio">Benefícios</a></li>
+			<li><a href="#adotar">Como Adotar</a></li>
+			<li><a href="#contato">Contato</a></li>
 		</ul>
 	</header>
 	<main>
@@ -31,21 +46,72 @@
 				<div>
 					<h1>Adote um gato!</h1>
 					<p>Você pode com um gesto mudar a vida de um gatinho e a sua</p>
-					<button>Descubra os benefícios</button>
+					<a href="#beneficio">
+						<button>Descubra os benefícios</button>
+					</a>
 				</div>
-				<img src="imports/img/fundo-inicio.svg" alt="">
+				<img src="imports/img/fundo-inicio.svg" alt="Fundo inicial de gatos">
 			</div>
 		</div>
 		<div id="beneficio" class="displays">
-			
+			<div>
+				<ul>
+					<li>Um amigo para a vida toda</li>
+					<li>Cientistas provaram! Eles podem melhorar sua saúde</li>
+					<li>Eles nos ajudam a dormir</li>
+					<li>Gatos diminuem alergias</li>
+					<li>O ronronar dos gatinhos é regenerador</li>
+					<li>Eles são excelentes caçadores</li>
+					<li>Gatos são muito leais</li>
+				</ul>
+
+				<iframe src="https://www.youtube.com/embed/KykqUGoqJgw" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
 		</div>
 		<div id="adotar" class="displays">
-			
+			<div>
+				<div>
+					<h1>Para adotar um gatinho você deve verificar os seguintes locais proximos de você</h1>
+					<ul>
+						<li>ONGs de proteção aos animais</li>
+						<li>Pet shops</li>
+						<li>Anúncios de doações</li>
+					</ul>
+				</div>
+
+				<div id="mapid"></div>
+			</div>
 		</div>
 		<div id="contato" class="displays">
-			
+			<div>
+				<div>
+					<h1>Ficou com alguma dúvida? Entre em contato com a gente!</h1>
+
+					<div>
+						<label for="nome">Nome:</label>
+						<input type="text" id="nome">
+					</div>
+
+					<div>
+						<label for="email">Email:</label>
+						<input type="email" id="email">
+					</div>
+
+					<div>
+						<label for="problema">Problema:</label>
+						<textarea id="problema" rows="10"></textarea>
+					</div>
+
+					<button id="enviar">Enviar</button>
+				</div>
+
+				<img src="imports/img/fundo-contato.svg" alt="Fundo de contato gatos">
+			</div>
 		</div>
 	</main>
-	<script src="imports/js/index.js"></script>
+
+	<script src="imports/jquery_3-5-1.js"></script>
+	<script src="imports/js/mapa.js"></script>
+	<script src="imports/js/formulario.js"></script>
 </body>
 </html>
