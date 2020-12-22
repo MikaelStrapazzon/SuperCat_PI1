@@ -1,0 +1,66 @@
+#inicio > div{
+	height: 70%;
+
+	display: flex;
+
+	position: absolute;
+
+	text-align: left;
+
+	bottom: 0px;
+	left: clamp( 0px, 10%, 300px);
+}
+
+#inicio > div > div{
+	width: clamp( 0px, 80%, 380px);
+
+	text-align: left;
+}
+
+#inicio h1{
+	font-size: clamp( 20px, 10vw, 8rem);
+}
+
+#inicio p{
+	font-size: clamp( 20px, 5vw, 5rem);
+
+	margin: 20px 0px;
+}
+
+#inicio button{
+	font-size: clamp( 20px, 5vw, 2.5rem);
+
+	padding: 8px;
+
+	margin-bottom: 20px;
+
+	background-color: #FFDC9C;
+	border: none;
+	border-radius: 6px;
+
+	box-shadow: 2px 2px 5px #80612873;
+}
+
+#inicio button:hover{
+	background-color: #CCB07C;
+
+	transition: background 300ms;
+
+	cursor: pointer;
+}
+
+#inicio img{
+	width: clamp( 20px, 60%, 800px);
+}
+
+/*Mobile*/
+@media(max-width: 1000px){
+	#inicio > div{
+		height: 75%;
+		flex-direction: column;
+	}
+
+	#inicio img{
+		width: clamp( 250px, 40%, 500px);
+	}
+}
